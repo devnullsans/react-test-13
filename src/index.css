@@ -28,7 +28,7 @@ body {
   margin: 0;
   display: block;
   color: var(--clr-dark);
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -141,6 +141,11 @@ ul {
   background-color: var(--clr-tertiary--dark);
 }
 
+.btn:disabled {
+  background-color: var(--clr-secondary);
+  cursor: not-allowed;
+}
+
 .btn-cog {
   align-self: start;
   background-color: var(--clr-secondary--light);
@@ -153,6 +158,46 @@ ul {
   background-color: var(--clr-secondary);
 }
 
+.country-loading {
+  font-size: 3rem;
+}
+
+.country-container {
+  grid-gap: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.country-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.country-btn {
+  background-color: var(--clr-valid--light);
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.5rem;
+  width: 10rem;
+}
+
+.country-btn:disabled {
+  background-color: var(--clr-secondary);
+  cursor: not-allowed;
+}
+
+.country-list {
+  grid-gap: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.country-item {
+  font-size: 1.8rem;
+}
+
 .footer {
   background-color: var(--clr-secondary);
   color: var(--clr-secondary--dark);
@@ -160,4 +205,106 @@ ul {
   font-size: 1.8rem;
   padding: 1.5rem 1rem;
   place-items: center;
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  height: 100%;
+  left: 0;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.modal {
+  grid-gap: 2rem;
+  background-color: var(--clr-light);
+  border-radius: 0.4rem;
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  width: 40rem;
+}
+
+.modal-close {
+  background-color: transparent;
+  border: none;
+  display: grid;
+  font-size: 1.8rem;
+  height: 3rem;
+  justify-self: end;
+  place-items: center;
+  width: 3rem;
+}
+
+.modal-form {
+  grid-gap: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.modal-control {
+  grid-gap: 1rem;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto 1fr;
+}
+
+.modal-btn {
+  background-color: var(--clr-valid--light);
+  border: 0.1rem solid transparent;
+  border-radius: 0.4rem;
+  justify-self: center;
+  padding: 0.8rem 1.4rem;
+}
+
+.modal-input {
+  border: 0.1rem solid var(--clr-secondary);
+  border-radius: 0.4rem;
+  padding: 0.8rem 1rem;
+}
+
+.notification-list {
+  grid-gap: 1rem;
+  bottom: 0;
+  display: grid;
+  gap: 1rem;
+  left: 50%;
+  padding: 2rem 2rem 6rem;
+  position: fixed;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.toast {
+  align-items: center;
+  border-radius: 0.2rem;
+  color: var(--clr-valid--dark);
+  background-color: var(--clr-valid);
+  display: flex;
+  justify-content: space-between;
+  min-width: 20rem;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+.toast-text {
+  box-sizing: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.toast-close {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  height: 2.2rem;
+  place-items: center;
+  width: 2.2rem;
 }
