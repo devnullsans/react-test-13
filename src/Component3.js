@@ -70,7 +70,7 @@ function Countries() {
     return () => {
       if (controller.signal.aborted) controller.abort();
     };
-  }, [setLoading, setCountries, setError, url]);
+  }, [setLoading, setCountries, setError]);
 
   return loading ? (
     <p
